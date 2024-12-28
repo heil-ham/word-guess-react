@@ -1,0 +1,147 @@
+* {
+    font-family: Inter, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #222222;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+header {
+    margin-top: 80px;
+    text-align: center;
+    width: 400px;
+}
+
+header h3 {
+    color: #cccccc;
+}
+
+header p {
+    color: #888888;
+}
+
+.game-status {
+    border-radius: 6px;
+    padding: 10px;
+    background-color: rgb(21, 150, 21);
+    text-align: center;
+    width: 300px;
+    color: #eeeeee;
+}
+
+.game-over {
+    border-radius: 6px;
+    padding: 10px;
+    background-color: red;
+    text-align: center;
+    width: 300px;
+    color: #eeeeee;
+}
+
+.languages-container {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3px;
+}
+
+.language {
+    padding: 4px;
+    border-radius: 2px;
+    font-size: 0.85rem;
+    position: relative;
+}
+
+.language.lost::before {
+    content: '💀';
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 0.85rem;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.word {
+    display: flex;
+    gap: 2px;
+}
+
+.letter-element {
+    padding: 10px;
+    border-bottom: solid 2px rgb(189, 175, 175);
+    height: 50px;
+    width: 50px;
+    background-color: #333333;
+    color: #cccccc;
+    font-weight: 700;
+    text-align: center;
+    line-height: 200%;
+}
+
+.alphabet-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 490px;
+    gap: 5px;
+}
+
+.alphabet {
+    background-color: orange;
+    border: none;
+    border-radius: 3px;
+    width: 50px;
+    height: 50px;
+}
+
+.alphabet.correct {
+    background-color: green;
+}
+
+.alphabet.wrong {
+    background-color: red;
+}
+
+.new-game {
+    background-color: aqua;
+    border: none;
+    border-radius: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.red-word {
+    color: red;
+}
+
+@media screen and (max-width: 480px) {
+    .alphabet-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 400px;
+        gap: 5px;
+    }
+    
+    .alphabet {
+        width: 30px;
+        height: 30px;
+    }
+}
